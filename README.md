@@ -49,7 +49,3 @@ You will need Docker (or equivalent such as Colima or Podman) installed. Then to
 ### How do I load my own index? ###
 
 This has its own README file in the [customdata](customdata/README.md) directory. 
-
-### Where can I get doco for the API ###
-
-See [API Help and Swagger](https://github.com/ONSdigital/aims-api/blob/api-definitions/readme.md)
