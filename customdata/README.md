@@ -16,7 +16,7 @@ You will see that there are no indices in the cluster. This means the API will n
 
 3) Create your Index
 
-You have to create an Elasticsearch index with a subset of Local Authorities (selected via localCustodianCodes) using the instructions at
+You can create an Elasticsearch index with a subset of Local Authorities (selected via localCustodianCodes) using the instructions at
 
 https://github.com/ONSdigital/aims-spark?tab=readme-ov-file#indices-for-specific-las
 
@@ -53,7 +53,7 @@ Then restore the index from the snapshot.
 
   <img src="docker_cerebro_restore.png" width="500" title="Using Cerebro to restore index">
 
-Then add some aliases to the index:
+5) Add aliases to the index:
 
         index_full_hist_current
         index_full_nohist_current
@@ -66,7 +66,7 @@ Then add some aliases to the index:
 
   <img src="docker_cerebro_alias.png" width="500" title="Setting an alias with Cerebro">
 
-5) Now restart the API as shown below (screenshot is from Docker Desktop):
+6) Now restart the API as shown below (screenshot is from Docker Desktop):
 
   <img src="docker_restart.png" width="500" title="Restarting API with Docker Desktop">
 
@@ -78,7 +78,7 @@ And only addresses inside your selected LAs will be found. In the example below,
 
   <img src="docker_api_example.png" width="500" title="Calling the API with a browser">
 
-6) The UI should automatically detect that epoch 111 is available.
+7) The UI should automatically detect that epoch 111 is available.
 
         http://localhost:5000/
 
