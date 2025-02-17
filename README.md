@@ -4,7 +4,9 @@
 
 This repository contains the instructions and docker-compose files to enable anyone to run a local copy of the ONS Address Index Matching Service.
 
-The standard version comes with and Elasticsearch cluster (free sample AddressBase data preloaded), a REST API and a Python UI. The API is built using the Play Framework and the UI is built using Flask.
+The standard version comes with and Elasticsearch cluster (free sample AddressBase data preloaded), a tool to administer the cluster, a REST API and a Python UI. 
+
+These components are all supplied via public Docker images stored in a Google Cloud Platform Artifact Registry. When any of these are updated, a new release of AIMS DIY will be created. Users can subscribe to the release if they want to be informed when this happens.
 
 There is also a slightly different docker-compose file intended for those who have access to AddressBase Premium data and want to load their own index. 
 
