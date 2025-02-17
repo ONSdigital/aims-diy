@@ -4,14 +4,14 @@
 
 This repository contains the instructions and docker-compose files to enable anyone to run a local copy of the ONS Address Index Matching Service.
 
-The standard version comes with the free sample AddressBase data preloaded, and includes a REST API and a Python UI. The API is built using the Play Framework and the UI is built using Flask.
+The standard version comes with and Elasticsearch cluster (free sample AddressBase data preloaded), a REST API and a Python UI. The API is built using the Play Framework and the UI is built using Flask.
 
 There is also a slightly different docker-compose file intended for those who have access to AddressBase Premium data and want to load their own index. 
 
 The code for, and further details of the API, UI and Spark job to transform AddressBase data into an Elasticsearch index are in the repos below:
 
 [API](https://github.com/ONSdigital/aims-api) - Play Framework application (Scala)  
-[UI](https://github.com/ONSdigital/address-index-ui) - Python / Flask application
+[UI](https://github.com/ONSdigital/address-index-ui) - Python / Flask application  
 [Spark](https://github.com/ONSdigital/aims-spark) - Apache Spark job (Scala)
 
 ### How do I run the Dockerised AIMS? ###
