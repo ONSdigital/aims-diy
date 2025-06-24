@@ -46,6 +46,8 @@ You will need Docker (or equivalent such as Colima or Podman) installed. Then to
 
         http://localhost:5000/
 
+   If the UI does not load, it is most likely because the API needs to be restarted to pick up the Epoch number
+
 5) Use of Docker alternatives: The docker-compose script works with Colima without modification. For Podman, you will need to enable podman compose (can be done from the Podman Desktop) and if this points to docker-compose rather than podman-compose, docker-compose up will work without changes.
        
 ### How do I load my own index? ###
