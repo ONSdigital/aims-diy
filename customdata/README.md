@@ -57,12 +57,12 @@ Then restore the index from the snapshot.
 
         index_full_hist_current
         index_full_nohist_current
-        index_full_hist_111
-        index_full_nohist_111
+        index_full_hist_119
+        index_full_nohist_119
         index_skinny_hist_current
         index_skinny_nohist_current
-        index_skinny_hist_111
-        index_skinny_nohist_111
+        index_skinny_hist_119
+        index_skinny_nohist_119
 
   <img src="docker_cerebro_alias.png" width="500" title="Setting an alias with Cerebro">
 
