@@ -52,3 +52,4 @@ services:
       - API_AUTH_TYPE=JWT
       - JWT_TOKEN=abc123
       - SECRET_KEY=secret
+      - USER_AUTHS='{"developers":["UserNotLoggedIn"]}'
