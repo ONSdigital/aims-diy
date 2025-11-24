@@ -44,9 +44,9 @@ services:
     depends_on:
       - address-index-api
     environment:
-      API_URL: http://localhost:9001
-      BM_API_URL: http://localhost:9001
-      PROJECT_DOMAIN: http://localhost:9001
+      API_URL: http://address-index-api:9000
+      BM_API_URL: http://address-index-api:9000
+      PROJECT_DOMAIN: localhost:9200
       FLASK_ENV: production
       FLASK_APP: aims_ui
       API_AUTH_TYPE: JWT
