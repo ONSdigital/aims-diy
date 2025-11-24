@@ -46,7 +46,7 @@ services:
     environment:
       API_URL: http://address-index-api:9000
       BM_API_URL: http://address-index-api:9000
-      PROJECT_DOMAIN: localhost:9200
+      PROJECT_DOMAIN: http://address-index-api:9000
       FLASK_ENV: production
       FLASK_APP: aims_ui
       API_AUTH_TYPE: JWT
