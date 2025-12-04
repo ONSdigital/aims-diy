@@ -47,11 +47,12 @@ services:
     depends_on:
       - address-index-api
     environment:
-      - API_URL=http://host.docker.internal:9001
-      - BM_API_URL=http://host.docker.internal:9001
-      - PROJECT_DOMAIN=http://localhost:9001
-      - FLASK_ENV=production
-      - FLASK_APP=aims_ui
-      - API_AUTH_TYPE=JWT
-      - JWT_TOKEN=abc123
-      - SECRET_KEY=secret
+      API_URL: http://address-index-api:9000
+      BM_API_URL: http://address-index-api:9000
+      PROJECT_DOMAIN: http://localhost:9001
+      FLASK_ENV: production
+      FLASK_APP: aims_ui
+      API_AUTH_TYPE: JWT
+      JWT_TOKEN: abc123
+      SECRET_KEY: secret
+      USER_AUTHS: '{"developers": ["UserNotLoggedIn"]}'
