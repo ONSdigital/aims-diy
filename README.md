@@ -98,13 +98,12 @@ A result returned with a limit of **1** may have several equally good alternativ
 
 ## Assuming "I" Means Multiple Matches Exist
 
-**I** simply means no clear winner.
+"**I**" means no _clear_ winner.
 
 This could be:
 
 - One weak match
 - Several similar matches
-- Many similar matches
 
 # Examples
 
