@@ -72,9 +72,9 @@ The confidence score indicates how likely the returned address is to be correct.
 
 ## Recommendation Code
 
-| Code | Meaning |
+| Code | Meaning | 
 |--------|--------|
-| **A** (Accept)| Clear best match. |
+| **A** (Accept)| Clear best match. This has a typical accuracy of 97.5%. |
 | **I** (Investigate)| No clear winner. Review the result. |
 
 AIMS compares the top match against other potential matches and automatically assigns the recommendation.
