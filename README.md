@@ -140,8 +140,6 @@ This could be:
 
 ## Bulk Search (Limit = 5)
 
-
-
 | Address ID | Rank | Score | Rec |
 |------------|------|--------|--------|
 | A002 | 1 | 61 | I |
