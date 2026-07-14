@@ -79,6 +79,8 @@ The confidence score indicates how likely the returned address is to be correct.
 
 AIMS compares the top match against other potential matches and automatically assigns the recommendation.
 
+> * Results with an 'A' have a typical accuracy of 97.5%.*
+
 ## Result Limits Matter
 
 Returning fewer results can hide important context.
@@ -91,6 +93,9 @@ Returning fewer results can hide important context.
 A result returned with a limit of **1** may have several equally good alternatives **hidden from view.**
 
 # Common Pitfalls When Interpreting Results
+
+## Garbage In, Garbage Out
+Poor quality results may be indicative of poor quality input query data. To improve results, consider using the [Address Cleanup Functions](http://www.example.com), or check your dataset for issues.
 
 ## Assuming "A" Means Correct
 
@@ -109,31 +114,35 @@ This could be:
 
 ## Single Search (Limit = 1)
 
+// For consistncy, the table headings are repeated in each example.
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
 | Rank | Score | Rec |
 |------|------|------|
+| 
 | 1 | 62 | I |
 
 **Interpretation:** One result shown. Other competing matches may be hidden.
 
 ## Single Search (Limit = 5)
 
-| Rank | Score | Rec |
-|------|------|------|
-| 1 | 62 | I |
-| 2 | 62 | I |
-| 3 | 62 | I |
-| 4 | 61 | I |
-| 5 | 61 | I |
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
+| A001 | 1 | 62 | I |
+| A002 | 2 | 62 | I |
+| A003 | 3 | 62 | I |
+| A004 | 4 | 61 | I |
+| A005 | 5 | 61 | I |
 
 **Interpretation:** No obvious winner exists.
 
 ## Bulk Search (Limit = 1)
 
-| Address ID | Score | Rec |
-|------------|--------|--------|
-| A001 | 74 | A |
-| A002 | 61 | I |
-| A003 | No Match | - |
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
+|| A001 | 1 | 74 | A |
+| A002 | 1 | 61 | I |
+| A003 | 1 | No Match | - |
 
 **Interpretation:** A002 may have hidden alternatives.
 
