@@ -79,7 +79,7 @@ The confidence score indicates how likely the returned address is to be correct.
 
 AIMS compares the top match against other potential matches and automatically assigns the recommendation.
 
-> * Results with an 'A' have a typical accuracy of 97.5%.*
+> *Results with an 'A' have a typical accuracy of 97.5%.*
 
 ## Result Limits Matter
 
