@@ -95,7 +95,7 @@ A result returned with a limit of **1** may have several equally good alternativ
 # Common Pitfalls When Interpreting Results
 
 ## Garbage In, Garbage Out
-Poor quality results may be indicative of poor quality input query data. To improve results, consider using the [Address Cleanup Functions](http://www.example.com), or check your dataset for issues.
+Poor quality results may be indicative of poor quality input query data. To improve results, consider using the [Address Cleanup Toolkit](https://github.com/ONSdigital/address-toolkit), or check your dataset for issues.
 
 ## Assuming "A" Means Correct
 
