@@ -114,12 +114,8 @@ This could be:
 
 ## Single Search (Limit = 1)
 
-// For consistncy, the table headings are repeated in each example.
 | Address ID | Rank | Score | Rec |
 |------------|------|--------|--------|
-| Rank | Score | Rec |
-|------|------|------|
-| 
 | 1 | 62 | I |
 
 **Interpretation:** One result shown. Other competing matches may be hidden.
@@ -129,10 +125,10 @@ This could be:
 | Address ID | Rank | Score | Rec |
 |------------|------|--------|--------|
 | A001 | 1 | 62 | I |
-| A002 | 2 | 62 | I |
-| A003 | 3 | 62 | I |
-| A004 | 4 | 61 | I |
-| A005 | 5 | 61 | I |
+| A001 | 2 | 62 | I |
+| A001 | 3 | 62 | I |
+| A001 | 4 | 61 | I |
+| A001 | 5 | 61 | I |
 
 **Interpretation:** No obvious winner exists.
 
@@ -140,7 +136,7 @@ This could be:
 
 | Address ID | Rank | Score | Rec |
 |------------|------|--------|--------|
-|| A001 | 1 | 74 | A |
+| A001 | 1 | 74 | A |
 | A002 | 1 | 61 | I |
 | A003 | 1 | No Match | - |
 
