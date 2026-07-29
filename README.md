@@ -53,3 +53,105 @@ You will need Docker (or equivalent such as Colima or Podman) installed. Then to
 ### How do I load my own index? ###
 
 This has its own README file in the [customdata](customdata/README.md) directory. 
+
+### How do I Interpret Results? ###
+
+# How to Interpret AIMS Results
+
+## Confidence Score
+
+The confidence score indicates how likely the returned address is to be correct.
+
+| Score | Typical Accuracy* |
+|---------|---------|
+| 55 | ~10% |
+| 60 | ~60% |
+| 70+ | ~90% |
+
+> *These are broad examples based on historical dataset performance. Actual matching success may vary.*
+
+## Recommendation Code
+
+| Code | Meaning | 
+|--------|--------|
+| **A** (Accept)| Clear best match. This has a typical accuracy of 97.5%. |
+| **I** (Investigate)| No clear winner. Review the result. |
+
+AIMS compares the top match against other potential matches and automatically assigns the recommendation.
+
+> *Results with an 'A' have a typical accuracy of 97.5%.*
+
+## Result Limits Matter
+
+Returning fewer results can hide important context.
+
+| Limit | Possible Results |
+|---------|---------|
+| 1 | None or one match |
+| 5+ | None, one or many matches |
+
+A result returned with a limit of **1** may have several equally good alternatives **hidden from view.**
+
+# Common Pitfalls When Interpreting Results
+
+## Garbage In, Garbage Out
+Poor quality results may be indicative of poor quality input query data. To improve results, consider using the [Address Cleanup Toolkit](https://github.com/ONSdigital/address-toolkit), or check your dataset for issues.
+
+## Assuming "A" Means Correct
+
+**A** means "best available match", not "guaranteed correct".
+
+## Assuming "I" Means Multiple Matches Exist
+
+"**I**" means no _clear_ winner.
+
+This could be:
+
+- One weak match
+- Several similar matches
+
+# Examples
+
+## Single Search (Limit = 1)
+
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
+| A001 | 1 | 62 | I |
+
+**Interpretation:** One result shown. Other competing matches may be hidden.
+
+## Single Search (Limit = 5)
+
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
+| A001 | 1 | 62 | I |
+| A001 | 2 | 62 | I |
+| A001 | 3 | 62 | I |
+| A001 | 4 | 61 | I |
+| A001 | 5 | 61 | I |
+
+**Interpretation:** No obvious winner exists.
+
+## Bulk Search (Limit = 1)
+
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
+| A001 | 1 | 74 | A |
+| A002 | 1 | 61 | I |
+| A003 | 1 | No Match | - |
+
+**Interpretation:** A002 may have hidden alternatives.
+
+## Bulk Search (Limit = 5)
+
+| Address ID | Rank | Score | Rec |
+|------------|------|--------|--------|
+| A002 | 1 | 61 | I |
+| A002 | 2 | 61 | I |
+| A002 | 3 | 60 | I |
+| A003 | 1 | 80 | A |
+| A003 | 2 | 23 | R |
+| A003 | 3 | 22 | R |
+
+
+**Interpretation:** Multiple similarly scored candidates explain the Investigate recommendation.
