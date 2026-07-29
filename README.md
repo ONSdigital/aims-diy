@@ -116,7 +116,7 @@ This could be:
 
 | Address ID | Rank | Score | Rec |
 |------------|------|--------|--------|
-| 1 | 62 | I |
+| A001 | 1 | 62 | I |
 
 **Interpretation:** One result shown. Other competing matches may be hidden.
 
