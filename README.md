@@ -149,10 +149,9 @@ This could be:
 | A002 | 1 | 61 | I |
 | A002 | 2 | 61 | I |
 | A002 | 3 | 60 | I |
-
 | A003 | 1 | 80 | A |
-| A003 | 2 | 23 | I |
-| A003 | 3 | 22 | I |
+| A003 | 2 | 23 | R |
+| A003 | 3 | 22 | R |
 
 
 **Interpretation:** Multiple similarly scored candidates explain the Investigate recommendation.
